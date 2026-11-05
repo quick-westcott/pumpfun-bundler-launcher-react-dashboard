@@ -27,7 +27,7 @@ Whether you're launching your first token or managing multiple launches, Trenche
 **Connect with us:**
 - Website: [trencherbundler.fun](https://trencherbundler.fun)
 - Twitter: [@trencherbundler_x](https://x.com/trencherbundler_x)
-- Telegram: [@dogtoshi_x](https://t.me/dogtoshi_x)
+- Telegram: 
 
 ## Features
 
@@ -72,10 +72,10 @@ Whether you're launching your first token or managing multiple launches, Trenche
 **Key Features:**
 - **DEV Wallet Card** - Shows DEV wallet address, balance, and auto-sell toggle
 - **Bundle Wallet Cards** - Individual cards for each bundle wallet with:
-  - Wallet address and balance
-  - Buy amount configuration
-  - Auto-sell toggle and threshold
-  - Funding status
+ - Wallet address and balance
+ - Buy amount configuration
+ - Auto-sell toggle and threshold
+ - Funding status
 - **Post-Launch Trading Cards** - Holder wallet configuration with auto-sell
 - **Auto-Sell Settings** - Configure price thresholds and sell percentages per wallet
 - **MEV Protection** - Enable delays to avoid front-running
@@ -89,12 +89,12 @@ Whether you're launching your first token or managing multiple launches, Trenche
 - **P&L Tracking** - Track profits/losses across all wallets
 - **Wallet Positions** - See token balances and SOL balances per wallet
 - **Quick Actions:**
-  - **Sell All** - Instantly sell all positions via Jito bundle
-  - **Gather** - Recover SOL from all wallets
-  - **Status** - Check wallet and token status
+ - **Sell All** - Instantly sell all positions via Jito bundle
+ - **Gather** - Recover SOL from all wallets
+ - **Status** - Check wallet and token status
 - **Recovery Section:**
-  - **Retry** - Retry failed bundle submission (uses existing wallets)
-  - **Relaunch** - Start a completely new launch
+ - **Retry** - Retry failed bundle submission (uses existing wallets)
+ - **Relaunch** - Start a completely new launch
 
 ## Quick Start
 
@@ -102,15 +102,15 @@ Whether you're launching your first token or managing multiple launches, Trenche
 
 - **Node.js 18+** ([Download](https://nodejs.org/))
 - **Solana RPC Endpoint** - **HIGHLY RECOMMENDED:** Use a dedicated RPC service
-  - **Free tier works fine!** Get free Helius RPC: https://helius.dev
-  - Public RPC will cause rate limits and failed launches
+ - **Free tier works fine!** Get free Helius RPC: https://helius.dev
+ - Public RPC will cause rate limits and failed launches
 - **SOL** for transaction fees and token launches
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/dogtoshi-sz/pumpfun-bundler-launcher-react-dashboard.git
+git clone https://github.com//pumpfun-bundler-launcher-react-dashboard.git
 cd pumpfun-bundler-launcher-react-dashboard
 
 # Install root dependencies
@@ -129,41 +129,41 @@ cd ..
 ### Configuration
 
 1. **Copy the example environment file:**
-   ```bash
-   cp .env.example .env
-   ```
+ ```bash
+ cp .env.example .env
+ ```
 
 2. **Edit `.env` with your settings:**
-   ```env
-   # REQUIRED - Your main funding wallet private key (base58)
-   PRIVATE_KEY=your_private_key_here
-   
-   # REQUIRED - Solana RPC endpoint (use Helius/QuickNode for best results)
-   RPC_ENDPOINT=https://mainnet.helius-rpc.com/?api-key=YOUR_KEY
-   RPC_WEBSOCKET_ENDPOINT=wss://mainnet.helius-rpc.com/?api-key=YOUR_KEY
-   
-   # Token settings (configure before launch)
-   TOKEN_NAME=Your Token Name
-   TOKEN_SYMBOL=SYMBOL
-   FILE=./image/your-logo.png
-   ```
+ ```env
+ # REQUIRED - Your main funding wallet private key (base58)
+ PRIVATE_KEY=your_private_key_here
+ 
+ # REQUIRED - Solana RPC endpoint (use Helius/QuickNode for best results)
+ RPC_ENDPOINT=https://mainnet.helius-rpc.com/?api-key=YOUR_KEY
+ RPC_WEBSOCKET_ENDPOINT=wss://mainnet.helius-rpc.com/?api-key=YOUR_KEY
+ 
+ # Token settings (configure before launch)
+ TOKEN_NAME=Your Token Name
+ TOKEN_SYMBOL=SYMBOL
+ FILE=./image/your-logo.png
+ ```
 
 3. **Start the API server** (Terminal 1):
-   ```bash
-   cd api-server
-   node control-panel-server.js
-   ```
+ ```bash
+ cd api-server
+ node control-panel-server.js
+ ```
 
 4. **Start the frontend** (Terminal 2):
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+ ```bash
+ cd frontend
+ npm run dev
+ ```
 
 5. **Open your browser:**
-   ```
-   http://localhost:5173
-   ```
+ ```
+ http://localhost:5173
+ ```
 
 ## How It Works
 
@@ -196,17 +196,17 @@ LUTs are created automatically and extended as needed. You can view them on Sola
 
 ```
 keys/
-├── current-run.json          # Current launch data (wallets, mint, status)
-├── data.json                 # All created wallets (bundle, DEV, holder)
-├── warmed-wallets.json       # Pre-warmed wallets for reuse
-├── archive.txt               # ALL private keys backup (critical for recovery)
+├── current-run.json # Current launch data (wallets, mint, status)
+├── data.json # All created wallets (bundle, DEV, holder)
+├── warmed-wallets.json # Pre-warmed wallets for reuse
+├── archive.txt # ALL private keys backup (critical for recovery)
 ├── intermediary-wallets.json # Privacy routing wallets (if enabled)
-├── mixing-wallets.json       # Mixing wallets (if privacy mode enabled)
-├── pnl/                      # Profit & loss tracking files
-│   ├── pnl-*.json           # Per-token P&L data
-│   └── profit-loss.json     # Aggregate P&L tracking
-├── token-configs/           # Saved token configurations
-└── wallet-profiles/         # Saved wallet profiles
+├── mixing-wallets.json # Mixing wallets (if privacy mode enabled)
+├── pnl/ # Profit & loss tracking files
+│ ├── pnl-*.json # Per-token P&L data
+│ └── profit-loss.json # Aggregate P&L tracking
+├── token-configs/ # Saved token configurations
+└── wallet-profiles/ # Saved wallet profiles
 ```
 
 **Critical Security Notes:**
@@ -214,11 +214,11 @@ keys/
 - All keys are stored **locally only** - never sent anywhere
 - Keys are saved **immediately** after wallet creation
 - **ALL private keys are automatically saved to `archive.txt`** - This includes:
-  - Bundle wallet keys
-  - Holder wallet keys
-  - DEV wallet keys
-  - **Intermediary wallet keys** (during privacy routing)
-  - **Mixing wallet keys** (during cross-chain operations)
+ - Bundle wallet keys
+ - Holder wallet keys
+ - DEV wallet keys
+ - **Intermediary wallet keys** (during privacy routing)
+ - **Mixing wallet keys** (during cross-chain operations)
 - **If anything fails during cross-chain mixing or intermediary wallet operations, your keys are safely stored in `archive.txt`**
 - **Backup your `keys/` folder regularly!**
 - **Never commit or share your `.env` file or `keys/` folder**
@@ -289,14 +289,14 @@ Interactive menu to recover from specific wallet types.
 
 1. **Configure Settings** - Go to Settings tab, set your RPC and funding wallet
 2. **Prepare Wallets** - Go to Wallets tab:
-   - Create fresh wallets, OR
-   - Warm existing wallets, OR
-   - Use a mix of both
+ - Create fresh wallets, OR
+ - Warm existing wallets, OR
+ - Use a mix of both
 3. **Configure Launch** - Go to Launch Token tab:
-   - Set token name, symbol, image
-   - Configure DEV buy amount
-   - Select bundle wallets and amounts
-   - Configure holder wallets (post-launch trading)
+ - Set token name, symbol, image
+ - Configure DEV buy amount
+ - Select bundle wallets and amounts
+ - Configure holder wallets (post-launch trading)
 4. **Launch** - Click "Launch Token" and watch the progress
 5. **Monitor** - Switch to Trading Terminal to see live trades and P&L
 
@@ -328,9 +328,9 @@ Or use the "Sell All" button in the Trading Terminal.
 #### **Select Wallets** (DEV/Bundle/Holder sections)
 - **What it does:** Opens modal to select which wallets to use
 - **Options:**
-  - **Use Warmed Wallets** - Select from pre-warmed wallets
-  - **Auto-Create** - Create fresh wallets automatically
-  - **Select + Create** - Choose some warmed + create new ones
+ - **Use Warmed Wallets** - Select from pre-warmed wallets
+ - **Auto-Create** - Create fresh wallets automatically
+ - **Select + Create** - Choose some warmed + create new ones
 - **When to use:** When you want to choose specific wallets or create new ones
 
 #### **Auto-Sell Toggle** (Per wallet card)
@@ -353,8 +353,8 @@ Or use the "Sell All" button in the Trading Terminal.
 #### **Gather** (Green Button)
 - **What it does:** Recovers SOL from all wallets back to main funding wallet
 - **What it recovers:**
-  - Native SOL (withdrawable balance)
-  - Token account rent (closes empty token accounts)
+ - Native SOL (withdrawable balance)
+ - Token account rent (closes empty token accounts)
 - **When to use:** After selling tokens or to recover stuck funds
 - **Note:** Leaves rent-exempt balance (can't withdraw to zero)
 
@@ -384,17 +384,17 @@ Or use the "Sell All" button in the Trading Terminal.
 #### **Create Wallets** (Button)
 - **What it does:** Generates fresh bundle and/or holder wallets
 - **Options:**
-  - Bundle wallets only
-  - Holder wallets only
-  - Both
+ - Bundle wallets only
+ - Holder wallets only
+ - Both
 - **Saves to:** `data.json` and `warmed-wallets-for-launch.json`
 - **When to use:** When you need new wallets for launches
 
 #### **Warm Wallets** (Button)
 - **What it does:** Pre-funds wallets with SOL for faster launches
 - **Benefits:** 
-  - Faster launches (no funding delay)
-  - Wallets ready to use immediately
+ - Faster launches (no funding delay)
+ - Wallets ready to use immediately
 - **Saves to:** `warmed-wallets-for-launch.json`
 - **When to use:** Before launching to speed up the process
 
@@ -425,25 +425,25 @@ Or use the "Sell All" button in the Trading Terminal.
 
 ```
 trencher-bundler/
-├── api-server/          # Backend API server
-│   ├── control-panel-server.js  # Main API server
-│   └── pumpportal-tracker.js    # Real-time trade tracking
-├── frontend/            # React dashboard
-│   └── src/
-│       ├── components/  # UI components
-│       └── services/    # API client
-├── cli/                 # Command-line tools
-│   ├── gather.ts        # Recover SOL from current run
-│   ├── withdraw-*.ts    # Withdrawal scripts
-│   └── recovery-center.ts  # Interactive recovery
-├── src/                 # Core bundler logic
-│   ├── main.ts         # Token creation, buy instructions
-│   └── wallet-warming-manager.ts  # Wallet management
-├── executor/            # Transaction execution
-│   └── jito.ts         # Jito bundle submission
-├── constants/           # Configuration constants
-├── keys/                # Wallet keys (gitignored)
-└── index.ts             # Main launch script
+├── api-server/ # Backend API server
+│ ├── control-panel-server.js # Main API server
+│ └── pumpportal-tracker.js # Real-time trade tracking
+├── frontend/ # React dashboard
+│ └── src/
+│ ├── components/ # UI components
+│ └── services/ # API client
+├── cli/ # Command-line tools
+│ ├── gather.ts # Recover SOL from current run
+│ ├── withdraw-*.ts # Withdrawal scripts
+│ └── recovery-center.ts # Interactive recovery
+├── src/ # Core bundler logic
+│ ├── main.ts # Token creation, buy instructions
+│ └── wallet-warming-manager.ts # Wallet management
+├── executor/ # Transaction execution
+│ └── jito.ts # Jito bundle submission
+├── constants/ # Configuration constants
+├── keys/ # Wallet keys (gitignored)
+└── index.ts # Main launch script
 ```
 
 ## Configuration Options
@@ -452,37 +452,37 @@ See `.env.example` for all available options. Key settings:
 
 ```env
 # Bundle Configuration
-BUNDLE_WALLET_COUNT=3              # Number of bundle wallets
-BUNDLE_SWAP_AMOUNTS=1,0.5,0.25     # SOL amounts per wallet
+BUNDLE_WALLET_COUNT=3 # Number of bundle wallets
+BUNDLE_SWAP_AMOUNTS=1,0.5,0.25 # SOL amounts per wallet
 
 # Jito Settings
-JITO_FEE=0.001                     # Jito tip (SOL)
-MINIMUM_JITO_TIP=0.0001            # Minimum tip
+JITO_FEE=0.001 # Jito tip (SOL)
+MINIMUM_JITO_TIP=0.0001 # Minimum tip
 
 # Auto Actions
-AUTO_RAPID_SELL=false              # Auto rapid sell after launch
-AUTO_GATHER=true                   # Auto gather SOL after rapid sell
-WEBSOCKET_TRACKING_ENABLED=true    # Real-time trade tracking
+AUTO_RAPID_SELL=false # Auto rapid sell after launch
+AUTO_GATHER=true # Auto gather SOL after rapid sell
+WEBSOCKET_TRACKING_ENABLED=true # Real-time trade tracking
 ```
 
 ## Security Best Practices
 
 1. **Never commit sensitive files:**
-   - `.env` (contains private keys)
-   - `keys/` folder (contains all wallet keys)
-   - These are gitignored by default
+ - `.env` (contains private keys)
+ - `keys/` folder (contains all wallet keys)
+ - These are gitignored by default
 
 2. **Backup your keys:**
-   - Regularly backup the `keys/` folder
-   - Store backups in a secure location (encrypted drive, password manager)
+ - Regularly backup the `keys/` folder
+ - Store backups in a secure location (encrypted drive, password manager)
 
 3. **Use dedicated RPC:**
-   - Public RPCs have rate limits
-   - Use Helius/QuickNode free tier (works great)
+ - Public RPCs have rate limits
+ - Use Helius/QuickNode free tier (works great)
 
 4. **Test with small amounts first:**
-   - Start with 0.1 SOL test launches
-   - Verify everything works before larger launches
+ - Start with 0.1 SOL test launches
+ - Verify everything works before larger launches
 
 ## Troubleshooting
 
@@ -538,7 +538,7 @@ We're constantly improving Trencher Bundler. Here's what's on the horizon:
 
 - **Enhanced Privacy Features** - Additional wallet mixing strategies and privacy routing options
 
-Got a feature request? [Open an issue](https://github.com/dogtoshi-sz/pumpfun-bundler-launcher-react-dashboard/issues) or reach out on [Telegram](https://t.me/dogtoshi_x).
+Got a feature request? [Open an issue](https://github.com//pumpfun-bundler-launcher-react-dashboard/issues) or reach out on [Telegram](https://t.me/dogtoshi_x).
 
 ## License
 
@@ -556,8 +556,8 @@ This software is provided "as is" without warranty. Use at your own risk. Always
 
 - **Website:** [trencherbundler.fun](https://trencherbundler.fun)
 - **Twitter:** [@trencherbundler_x](https://x.com/trencherbundler_x)
-- **Telegram:** [@dogtoshi_x](https://t.me/dogtoshi_x)
-- **Issues:** [GitHub Issues](https://github.com/dogtoshi-sz/pumpfun-bundler-launcher-react-dashboard/issues)
+- **Telegram:** 
+- **Issues:** [GitHub Issues](https://github.com//pumpfun-bundler-launcher-react-dashboard/issues)
 - **Documentation:** Check this README and `.env.example` comments
 
 ---
